@@ -1,6 +1,8 @@
 # Azure Sphere micropython
 
-Simple example how to use micropython in Azure Sphere
+This is a simple example how to use micropython in Azure Sphere ( may be bugs yet )
+
+Used Board: [Azure Sphere MT3620 Starter AES-MS-MT3620-SK-G by Avnet](https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-ms-mt3620-sk-g-3074457345636825680/)
 
 ```python
 import utime as time
