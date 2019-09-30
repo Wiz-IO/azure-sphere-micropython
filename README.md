@@ -24,9 +24,9 @@ Pin.close(pin_8)
 ![image](https://raw.githubusercontent.com/Wiz-IO/azure-sphere-micropython/master/azure-sphere-micropython.jpg) 
 
 **How To**
-* NEED installed Azure Sphere SDK ( Windows 10 only )
+* Need installed [Azure Sphere SDK](https://docs.microsoft.com/en-us/azure-sphere/install/install)
 * [Python 3](https://www.python.org/)
-* MAKE ... [I use MinGW](http://www.mingw.org/)
+* MAKE ... [I use from MinGW](http://www.mingw.org/)
 * Download [micropython](https://github.com/micropython/micropython)
 * Move this folder **azure-minimal** to micropython/ports
 * Open folder **azure-minimal**
@@ -38,6 +38,6 @@ Pin.close(pin_8)
 
 **Notes**
 
-_main.py is executed script_
+_main.py is executed script ( packed to image )_
 
 _app.image is precompiled example can be uploaded for test_
