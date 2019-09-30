@@ -34,3 +34,10 @@ Pin.close(pin_8)
 * Execute **make**
 * Run PACK_IMAGE.BAT (edit path to **azsphere**)
 * Run UPLOAD.BAT (edit path to **azsphere**)
+
+
+**Notes**
+
+_main.py is executed script_
+
+_app.image is precompiled example can be uploaded for test_
