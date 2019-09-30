@@ -22,6 +22,8 @@ void open_uart(int N)
     {
         redirect(uartFd, stderr);
         redirect(uartFd, stdout);
+        //setvbuf(stderr, NULL, _IONBF, 0);  
+        //setvbuf(stdout, NULL, _IONBF, 0);        
     }
 }
 
