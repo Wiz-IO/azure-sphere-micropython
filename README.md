@@ -28,7 +28,6 @@ Pin.close(pin_8)
 * [Python 3](https://www.python.org/)
 * MAKE ... [I use MinGW](http://www.mingw.org/)
 * Download [micropython](https://github.com/micropython/micropython)
-* any text editor
 * Move this folder **azure-minimal** to micropython/ports
 * Open folder **azure-minimal**
 * Open **Makefile** and edit your paths [ CROSS_DIR, SYSROOT, PYTHON ]
