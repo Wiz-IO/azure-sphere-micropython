@@ -39,5 +39,6 @@ Pin.close(pin_8)
 **Notes**
 
 * _main.py is executed script ( packed to image )_
+* _if source is compiled ( make ), edit only main.py >>> pack_image >>> upload_
 * _app.image is precompiled example can be uploaded for test_
-* _if source is compiled, edit only main.py >>> pack >>> upload_
+
