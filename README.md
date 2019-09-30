@@ -7,7 +7,8 @@
 * Download [micropython](https://github.com/micropython/micropython)
 
 * Move this folder **azure-minimal** to micropython/ports
+* Open in folder **azure-minimal**
 * Open file **Makefile** and re-edit your paths
-* **make**
+* Execute **make**
 * Run PACK_IMAGE.BAT
 * Run UPLOAD.BAT
