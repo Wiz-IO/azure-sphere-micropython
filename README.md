@@ -40,4 +40,4 @@ Pin.close(pin_8)
 
 * _main.py is executed script ( packed to image )_
 * _app.image is precompiled example can be uploaded for test_
-* _if source is compiled, edit only main.py >>>> pack and upload_
+* _if source is compiled, edit only main.py >>> pack >>> upload_
