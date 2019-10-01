@@ -37,7 +37,7 @@ Pin.close(pin_8)
 
 
 **Notes**
-* Log_Debug() is [redirected](https://github.com/Wiz-IO/azure-sphere-micropython/blob/master/azure-minimal/az_uart.c#L23) to real uart AVNET_AESMS_ISU0_UART ( 4 )
+* Log_Debug() is [redirected](https://github.com/Wiz-IO/azure-sphere-micropython/blob/master/azure-minimal/az_uart.c#L30) to real uart AVNET_AESMS_ISU0_UART ( 4 )
 * main.py is executed script ( packed to image )
 * if source is compiled ( make ), edit only main.py >>> pack_image >>> upload
 * app.image is precompiled example can be uploaded for test
