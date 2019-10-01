@@ -42,3 +42,5 @@ Pin.close(pin_8)
 * if source is compiled ( make ), edit only main.py >>> pack_image >>> upload
 * app.image is precompiled example can be uploaded for test
 
+**NEW**
+* Added socket
