@@ -34,6 +34,7 @@ SRC_C = \
 	py_execute.c \
 	mod_utime.c \
 	mod_pin.c \
+	mod_sock.c \
 	lib/utils/printf.c \
 	lib/utils/stdout_helpers.c \
 	lib/utils/pyexec.c \
@@ -44,6 +45,7 @@ SRC_C = \
 # List of sources for qstr extraction
 SRC_QSTR += mod_utime.c
 SRC_QSTR += mod_pin.c
+SRC_QSTR += mod_sock.c
 
 OBJ = $(PY_CORE_O) $(addprefix $(BUILD)/, $(SRC_C:.c=.o))
 

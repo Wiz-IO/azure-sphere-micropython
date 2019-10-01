@@ -1,8 +1,15 @@
+/*
+    Created on: 01.10.2019
+    Author: Georgi Angelov
+        http://www.wizio.eu/
+        https://github.com/Wiz-IO/azure-sphere-micropython
+*/        
+
 #include "py/gc.h"
 
 static char *stack_top;
 #if MICROPY_ENABLE_GC
-static char heap[4 * 1024];
+static char heap[16 * 1024];
 #endif
 
 void py_init(void)

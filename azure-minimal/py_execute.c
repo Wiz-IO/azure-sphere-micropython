@@ -1,3 +1,10 @@
+/*
+    Created on: 01.10.2019
+    Author: Georgi Angelov
+        http://www.wizio.eu/
+        https://github.com/Wiz-IO/azure-sphere-micropython
+*/  
+
 #include <errno.h>
 #include <stdbool.h>
 #include <stdlib.h>
@@ -107,9 +114,31 @@ mp_lexer_t *mp_lexer_new_from_file(const char *filename)
     return mp_lexer_new(qstr_from_str(filename), reader);
 }
 
+#if 0
 STATIC int handle_uncaught_exception(mp_obj_base_t *exc)
 {
     Log_Debug("[ERROR] Uncaught exception\n");
+    return 1;
+}
+#endif
+
+STATIC void stderr_print_strn(void *env, const char *str, size_t len) {
+    write(STDERR_FILENO, str, len);
+}
+
+const mp_print_t mp_stderr_print = {NULL, stderr_print_strn};
+#define FORCED_EXIT (0x100)
+STATIC int handle_uncaught_exception(mp_obj_base_t *exc) {
+    Log_Debug("[ERROR] Uncaught exception\n");
+    if (mp_obj_is_subclass_fast(MP_OBJ_FROM_PTR(exc->type), MP_OBJ_FROM_PTR(&mp_type_SystemExit))) {
+        mp_obj_t exit_val = mp_obj_exception_get_value(MP_OBJ_FROM_PTR(exc));
+        mp_int_t val = 0;
+        if (exit_val != mp_const_none && !mp_obj_get_int_maybe(exit_val, &val)) {
+            val = 1;
+        }
+        return FORCED_EXIT | (val & 255);
+    }
+    mp_obj_print_exception(&mp_stderr_print, MP_OBJ_FROM_PTR(exc));
     return 1;
 }
 

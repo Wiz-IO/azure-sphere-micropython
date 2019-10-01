@@ -1,3 +1,10 @@
+/*
+    Created on: 01.10.2019
+    Author: Georgi Angelov
+        http://www.wizio.eu/
+        https://github.com/Wiz-IO/azure-sphere-micropython
+*/        
+
 #include <unistd.h>
 #include <errno.h>
 #include <time.h>

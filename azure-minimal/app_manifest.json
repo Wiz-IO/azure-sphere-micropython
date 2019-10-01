@@ -1,6 +1,9 @@
 {
     "Name": "APP_PYTHON", 
-    "Capabilities": {        
+    "Capabilities": { 
+        "AllowedConnections": [
+            "wizio.eu", "example.com"
+        ],            
         "Uart": [ "$AVNET_AESMS_ISU0_UART" ], 
         "Gpio": [ "$AVNET_AESMS_PIN11_GPIO8", "$AVNET_AESMS_PIN12_GPIO9", "$AVNET_AESMS_PIN13_GPIO10" ],
         "SystemTime": true, 

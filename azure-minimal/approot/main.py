@@ -1,29 +1,20 @@
+print(' <py> Azure Sphere 2019 micropython')
+
 import utime as time
-import Pin 
+import usocket as socket
 
-print(' <py> microPython (from file)')
-print(' <py> Azure Sphere 2019 Hello World')
-for i in range(5):
-    print(' <py> i =', i)
-
-print(' <py> Pin module test')
-
-pin_8 = Pin.output(8, 0, 1)
-print(' <py> PIN_8 FD =', pin_8)
-for i in range(20):
-    Pin.set(pin_8, 1)
-    time.sleep(0.1)
-    Pin.set(pin_8, 0)
-    time.sleep(0.1) 
-Pin.set(pin_8, 1)    
-Pin.close(pin_8)
-
-pin_9 = Pin.output(9, 0, 1)
-print(' <py> PIN_9 FD =', pin_9)
-for i in range(20):
-    Pin.set(pin_9, 1)
-    time.sleep(0.1)
-    Pin.set(pin_9, 0)
-    time.sleep(0.1)   
-Pin.set(pin_9, 1)       
-Pin.close(pin_9) 
+def get(host):
+    print()
+    s = socket.socket()
+    ai = socket.getaddrinfo(host, 80)
+    addr = ai[0][-1]
+    print(" <py> Connecting to", host)
+    s.connect(addr)
+    print(" <py> Sending")
+    s.send("GET /iot.php HTTP/1.0\r\nHost:" + host + "\r\n\r\n")
+    print(" <py> Receive")
+    print(s.recv(4096))
+    s.close()
+    print(" <py> Closed")
+    
+get("wizio.eu") # AllowedConnections

@@ -1,3 +1,10 @@
+/*
+    Created on: 01.10.2019
+    Author: Georgi Angelov
+        http://www.wizio.eu/
+        https://github.com/Wiz-IO/azure-sphere-micropython
+*/        
+
 #include <stdio.h>
 #define UART_STRUCTS_VERSION 1
 #include <applibs/uart.h>
@@ -22,8 +29,8 @@ void open_uart(int N)
     {
         redirect(uartFd, stderr);
         redirect(uartFd, stdout);
-        //setvbuf(stderr, NULL, _IONBF, 0);  
-        //setvbuf(stdout, NULL, _IONBF, 0);        
+        setvbuf(stderr, NULL, _IONBF, 0);  
+        setvbuf(stdout, NULL, _IONBF, 0);          
     }
 }
 
