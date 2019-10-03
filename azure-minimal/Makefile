@@ -22,7 +22,7 @@ CFLAGS += -std=c11 -Wall -fno-omit-frame-pointer -fno-strict-aliasing -fno-excep
 CFLAGS += -Wno-unused-value
 LD = $(CROSS_COMPILE)gcc
 LDFLAGS = $(CORTEX) -B "$(CROSS_DIR)" --sysroot=$(SYSROOT) -Wl,--no-undefined -nodefaultlibs
-LIBS = -L$(SYSROOT)/usr/libraries -lc -lgcc_s -lapplibs
+LIBS = -L$(SYSROOT)/usr/libraries -lc -lgcc_s -lapplibs -lcurl
 
 CSUPEROPT = -Os # save some code space
 
@@ -32,9 +32,14 @@ SRC_C = \
 	py_init.c \
 	py_std.c \
 	py_execute.c \
+	py_buffers.c \
 	mod_utime.c \
+	mod_device.c \
 	mod_pin.c \
+	mod_i2c.c \
+	mod_led.c \
 	mod_sock.c \
+	mod_curl.c \
 	lib/utils/printf.c \
 	lib/utils/stdout_helpers.c \
 	lib/utils/pyexec.c \
@@ -44,8 +49,12 @@ SRC_C = \
 
 # List of sources for qstr extraction
 SRC_QSTR += mod_utime.c
+SRC_QSTR += mod_device.c
 SRC_QSTR += mod_pin.c
+SRC_QSTR += mod_i2c.c
+SRC_QSTR += mod_led.c
 SRC_QSTR += mod_sock.c
+SRC_QSTR += mod_curl.c
 
 OBJ = $(PY_CORE_O) $(addprefix $(BUILD)/, $(SRC_C:.c=.o))
 

@@ -1,20 +1,23 @@
-print(' <py> Azure Sphere 2019 micropython')
-
+print(' <py> Azure Sphere 2019 LED EXAMPLE')
 import utime as time
-import usocket as socket
+from dev import LED
+print(' <py> Led begin')
 
-def get(host):
-    print()
-    s = socket.socket()
-    ai = socket.getaddrinfo(host, 80)
-    addr = ai[0][-1]
-    print(" <py> Connecting to", host)
-    s.connect(addr)
-    print(" <py> Sending")
-    s.send("GET /iot.php HTTP/1.0\r\nHost:" + host + "\r\n\r\n")
-    print(" <py> Receive")
-    print(s.recv(4096))
-    s.close()
-    print(" <py> Closed")
-    
-get("wizio.eu") # AllowedConnections
+red = LED(8) # AVNET_AESMS_PIN11_GPIO8
+for i in range(10):
+    red.toggle()
+    time.sleep(0.1)
+red.off()
+
+green = LED(LED.GREEN) # LED.GREEN = 9
+for i in range(10):
+    green.toggle()
+    time.sleep(0.2) 
+green.off()       
+
+blue = LED(LED.BLUE) # LED.BLUE = 10
+blue.on()
+time.sleep(1.0) 
+blue.off()
+
+print(' <py> Led end')

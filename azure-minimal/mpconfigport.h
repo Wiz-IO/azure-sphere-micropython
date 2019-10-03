@@ -76,12 +76,17 @@ typedef long mp_off_t;
 // Extended modules
 #define MICROPY_PY_UTIME_MP_HAL (1)
 extern const struct _mp_obj_module_t mp_module_utime;
+extern const struct _mp_obj_module_t mp_module_dev;
 extern const struct _mp_obj_module_t mp_module_pin;
 extern const struct _mp_obj_module_t mp_module_socket;
+extern const struct _mp_obj_module_t mp_module_curl;
+
 #define MICROPY_PORT_BUILTIN_MODULES \
-    { MP_ROM_QSTR(MP_QSTR_utime),       MP_ROM_PTR(&mp_module_utime) },   \
-    { MP_ROM_QSTR(MP_QSTR_Pin),         MP_ROM_PTR(&mp_module_pin) },     \
-    { MP_ROM_QSTR(MP_QSTR_usocket),     MP_ROM_PTR(&mp_module_socket) },  \
+    { MP_ROM_QSTR(MP_QSTR_utime),       MP_ROM_PTR(&mp_module_utime) },     \
+    { MP_ROM_QSTR(MP_QSTR_dev),         MP_ROM_PTR(&mp_module_dev) },       \
+    { MP_ROM_QSTR(MP_QSTR_Pin),         MP_ROM_PTR(&mp_module_pin) },       \
+    { MP_ROM_QSTR(MP_QSTR_usocket),     MP_ROM_PTR(&mp_module_socket) },    \
+    { MP_ROM_QSTR(MP_QSTR_curl),        MP_ROM_PTR(&mp_module_curl) },      \
     /* eof this */
 
 

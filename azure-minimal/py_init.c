@@ -9,7 +9,7 @@
 
 static char *stack_top;
 #if MICROPY_ENABLE_GC
-static char heap[16 * 1024];
+static char heap[32 * 1024];
 #endif
 
 void py_init(void)

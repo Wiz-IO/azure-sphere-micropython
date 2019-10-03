@@ -6,6 +6,7 @@
         ],            
         "Uart": [ "$AVNET_AESMS_ISU0_UART" ], 
         "Gpio": [ "$AVNET_AESMS_PIN11_GPIO8", "$AVNET_AESMS_PIN12_GPIO9", "$AVNET_AESMS_PIN13_GPIO10" ],
+        "I2cMaster": [ "$AVNET_AESMS_ISU1_I2C", "$AVNET_AESMS_ISU2_I2C" ],
         "SystemTime": true, 
         "WifiConfig": true
     }, 
