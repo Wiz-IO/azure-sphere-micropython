@@ -30,7 +30,7 @@ Pin.close(pin_8)
 ![image](https://raw.githubusercontent.com/Wiz-IO/azure-sphere-micropython/master/azure-sphere-micropython.jpg) 
 
 **How To**
-* Need installed [Azure Sphere SDK](https://docs.microsoft.com/en-us/azure-sphere/install/install)
+* Need installed [Azure Sphere SDK](https://docs.microsoft.com/en-us/azure-sphere/install/install-sdk)
 * [Python 3](https://www.python.org/)
 * MAKE ... [I use from MinGW](http://www.mingw.org/)
 * Download [micropython](https://github.com/micropython/micropython)
