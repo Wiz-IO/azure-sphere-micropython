@@ -38,11 +38,8 @@ Pin.close(pin_8)
 * Download [micropython](https://github.com/micropython/micropython)
 * Move this folder **azure-minimal** to micropython/ports
 * Open folder **azure-minimal**
-* Install Platformio VSCode Extension
-https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide
-* Install Azure Shere Platorm for PlatformIO using these steps: https://github.com/Wiz-IO/platform-azure#platform-installation
 * Open **Makefile** and edit your paths [ CROSS_DIR, SYSROOT, PYTHON ]
-* Execute **make** ex: `mingw32-make.exe`
+* Execute **make.exe** 
 * Run PACK_IMAGE.BAT (edit path to **azsphere**)
 * Run UPLOAD.BAT (edit path to **azsphere**)
 
